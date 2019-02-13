@@ -18,8 +18,8 @@ def first_challenge
   contacts.each do |person, data|
     data.each do |parameter, value|
       if parameter == :favorite_icecream_flavors
-        parameter.delete_if do |value|
-          value == "strawberry"
+        value.delete_if do |item|
+          item == "strawberry"
         end
       end
     end
