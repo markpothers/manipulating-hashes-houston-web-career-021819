@@ -15,10 +15,12 @@ def first_challenge
 
   #your code here
 
-  contacts.each do |key, value|
-    if key == :favorite_icecream_flavors
-      key.delete_if do |value|
-        value == "strawberry"
+  contacts.each do |person, data|
+    data.each do |parameter, value|
+      if parameter == :favorite_icecream_flavors
+        parameter.delete_if do |value|
+          value == "strawberry"
+        end
       end
     end
   end
